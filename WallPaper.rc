@@ -1,0 +1,198 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Chinese (P.R.C.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_CONFIG DIALOGEX 0, 0, 303, 153
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Title is not available"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "切换墙纸",IDC_BUTTON_SWITCH,245,19,50,14
+    PUSHBUTTON      "添加目录",IDC_BUTTON_ADD,245,39,50,14
+    PUSHBUTTON      "删除目录",IDC_BUTTON_REMOVE,245,59,50,14
+    PUSHBUTTON      "确    定",IDOK,245,79,50,14
+    LISTBOX         IDC_LIST_DIRECTORIES,7,20,228,72,LBS_NOINTEGRALHEIGHT | LBS_WANTKEYBOARDINPUT | NOT WS_BORDER | WS_VSCROLL | WS_TABSTOP,WS_EX_STATICEDGE
+    CONTROL         "随机选择图片",IDC_CHECK_RADMON,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,19,110,66,10
+    CONTROL         "居中",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON | BS_FLAT | WS_GROUP | WS_TABSTOP,103,110,38,10
+    CONTROL         "平铺",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON | BS_FLAT,167,110,31,10
+    CONTROL         "拉伸",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON | BS_FLAT,229,110,39,10
+    CONTROL         "自动启动",IDC_CHECK_OS_STARTUP,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,19,123,68,10
+    CONTROL         "定时切换",IDC_CHECK_TIMING,"Button",BS_AUTOCHECKBOX | BS_FLAT | WS_TABSTOP,103,123,53,10
+    EDITTEXT        IDC_EDIT_HOURS,167,123,12,10,ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_EDIT_MINUTES,229,123,12,10,ES_NUMBER | NOT WS_BORDER,WS_EX_STATICEDGE
+    GROUPBOX        "选项:",IDC_STATIC,7,97,288,41
+    LTEXT           "小时",IDC_STATIC,186,123,20,8
+    LTEXT           "分",IDC_STATIC,253,123,26,8
+    LTEXT           "图片搜索路径(包含子目录):",IDC_STATIC_SELECT_TIP,7,6,184,8
+    EDITTEXT        IDC_EDIT_LOCATION,7,140,288,10,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP,WS_EX_STATICEDGE
+END
+
+IDD_DIALOG_ABOUT DIALOGEX 0, 0, 285, 89
+STYLE DS_SETFONT | DS_MODALFRAME | DS_CENTER | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "关于本软件"
+FONT 9, "宋体", 400, 0, 0x0
+BEGIN
+    LTEXT           "Version Info is not available",IDC_STATIC_VERSION,54,12,162,8
+    LTEXT           "这个程序只是写来玩的，大家喜欢就好。主要特性如下：\n- 最小系统资源占用\n- 最方便的操作\n- 最少的BUG^_^\n\n如果你发现此程序有BUG或者有其他好的建议请发送邮件至airmagicscu@163.com",IDC_STATIC_DESCRIPTION,53,24,208,58,0,WS_EX_STATICEDGE
+    ICON            IDI_ICON_WALLPAPER,IDC_STATIC_ICON,19,29,20,20
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_CONFIG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        TOPMARGIN, 6
+    END
+
+    IDD_DIALOG_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 278
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 82
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_TRAY MENU 
+BEGIN
+    POPUP ""
+    BEGIN
+        MENUITEM "关于...",                       IDM_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "配置...    (双击此图标)",            IDM_CONFIGURE
+        MENUITEM "切换墙纸 (单击此图标)",                IDM_SWITCHNOW
+        MENUITEM "删除当前墙纸",                      IDM_DELETE_CUR
+        MENUITEM SEPARATOR
+        MENUITEM "退出程序",                        IDM_EXIT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICON_WALLPAPER      ICON                    "icon_wallpaper.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_SYS_INSTANCE_MUTEX_NAME "wallpaper instance named mutex - airmagic"
+    IDS_SYS_APP_NAME        "Wallpaper Switch"
+    IDS_SYS_WINDOW_CLASS_NAME "Wallpaper Switcher Window"
+    IDS_SYS_AUTO_START_CMD_LINE "-auto"
+    IDS_SYS_REGISTER_KEY    "SOFTWARE\\airmagic\\wallpaper"
+    IDS_SYS_REGISTER_RUN    "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run"
+    IDS_MY_WORDS            "zengyongxing@gmail.com 2004-2011"
+    IDS_ABOUT               "关于"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_SELECT_A_DIR        "请选择一个目录:"
+    IDS_NO_ACTIVE_DESKTOP_USED 
+                            "当前系统没有使用Active Desktop. 现在使用它吗?\nYes:现在就使用Active Desktop\nNo:保持当前设置\nCancel:下次再问我吧"
+    IDS_APP_VERSION         "1.3"
+    IDS_APP_NAME_LOCAL      "自动墙纸切换工具"
+    IDS_APP_DESCRIPTION     "中文版"
+END
+
+#endif    // Chinese (P.R.C.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

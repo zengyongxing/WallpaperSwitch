@@ -1,0 +1,18 @@
+
+
+
+09/15/2004
+Left click on screen will not close popup menu.
+Can not search pictures in second sub-directry.
+Double click on icon will not bring hided window to top.
+
+09/16/2004
+Add description in Notify Icon Popup menu
+
+09/19/2004
+Convert to chinese simplified version
+Can insert empty directories with select nothing in popup dialog
+Can not display WallPaper Icon in AboutDlg
+
+02/16/2005 v1.2
+Add notify icon while explorer reload
